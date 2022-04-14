@@ -1,0 +1,190 @@
+html {
+  background: url(./utilities/BlackBass.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Verdana, Tahoma, sans-serif;
+  }
+
+
+
+.introduction {
+  font-size: 30px;
+  text-align: justify;
+  color: #E1F593;
+  height: 77vh;
+}
+
+.introduction>p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.container {
+  height: 77vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+div.legend {
+  height: 300px;
+  width: 500px;
+  /* border-style: solid;
+  border-width: 2px;
+  border-color: #E1F593; */
+  /* border-radius: 25px; */
+  text-align: center;
+}
+
+.legend>p {
+  background-color: #E1F593;
+  color: #010108;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #E1F593;
+  border: none;
+  padding: 5px 15px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+h1 {
+  background: -webkit-linear-gradient(to right, #010108 0%, #E1F593 38%);
+  background: -moz-linear-gradient(to right, #010108 0%, #E1F593 38%);
+  background: linear-gradient(to right, #010108 0%, #E1F593 38%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 30px; 
+
+} 
+
+h2 {
+  margin: unset;
+  text-decoration: underline;
+}
+
+h2:hover {
+  font-size: 30px;
+}
+
+.overflow {
+  position: fixed;
+  width: 70vw;
+  height: 23vh;
+  bottom: 0;
+  right: 0;
+  text-align: justify;
+  font-size: 30px;
+  color: #E1F593;
+  /* background-color: aqua; */
+
+}
+
+p {
+  margin: unset;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-left: 380px;
+  margin-top: none;
+  width: 30vw;
+  height: 23vh;
+  /* background-color: rgb(68, 168, 107); */
+
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timeline>h1 {
+  text-align:center;
+}
+
+ul {
+  padding: 50px 0;
+}
+
+ul li {
+  position:relative;
+  list-style-type: none;
+  width: 6px;
+  background-color: #E1F593;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+ul li::after {
+  background: #E1F593;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  }
+
+
+ul li div{
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+  background: #E1F593;
+}
+
+ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+ul li:nth-child(even) div {
+  left: -445px;
+}
+
+time {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
